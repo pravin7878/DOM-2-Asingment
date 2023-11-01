@@ -1,0 +1,42 @@
+#leaderbord{
+    width: 40%;
+    height: 550px;
+    margin: auto;
+    border: solid 2px red;
+    text-align: center;
+}
+
+#head{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+#btn{
+    width: 70%;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    /* border: solid 2px blue; */
+    grid-gap: 15px;
+    margin-top: 10px;
+}
+#btn>button{
+    border-radius: 16px;
+    height: 40px;
+}
+
+.lastbtn{
+    width: 20%;
+    height: 40px;
+    border-radius: 16px;
+}
+
+#enter{
+    width: 40%;
+    height: 40px;
+    border-radius: 10px;
+    margin-top: 20px;
+}

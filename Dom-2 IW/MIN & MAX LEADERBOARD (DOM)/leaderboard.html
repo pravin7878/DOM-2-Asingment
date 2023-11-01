@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>leaderbord</title>
+</head>
+<link rel="stylesheet" href="./leaderboard.css">
+<body>
+    <div id="leaderbord">
+    <div id="head">
+        <div>
+            <input type="number" class="min" value="43">
+            <h3>MIN</h3>
+        </div>
+       <div>
+        <input type="number" class="max" value="2019">
+        <h3>MAX</h3>
+       </div>
+    </div>
+    <h3>SCORE</h3>
+    <input type="number" id="score" >
+    <div id="btn">
+
+            <button>1</button>
+            <button>2</button>
+            <button>3</button>
+            <button>4</button>
+            <button>5</button>
+            <button>6</button>
+            <button>7</button>
+            <button>8</button>
+            <button>9</button>
+    </div>
+    <div>
+        <button class="lastbtn">0</button>
+    </div>
+   
+    <div>
+        <button id="enter">ENTER</button>
+    </div>
+</div>
+
+</body>
+<script>
+    let inp1 = document.getElementsByClassName('min')
+    inp1.value = 43;
+    let inp2 = document.getElementsByClassName('max')
+    inp1.value = 2019;
+    let score = document.getElementById('score')
+    let buttons = document.querySelectorAll('button')
+    console.log(buttons)
+    let str="";
+    let arr = Array.from(buttons)
+    arr.forEach('click' (e)=> {
+       str+= e.target.innerHTML
+       score.value = str;
+    });
+</script>
+</html>
