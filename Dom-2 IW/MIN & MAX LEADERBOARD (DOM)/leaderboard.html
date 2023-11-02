@@ -10,18 +10,17 @@
     <div id="leaderbord">
     <div id="head">
         <div>
-            <input type="number" class="min" value="43">
+            <input type="number" class="min" value=43>
             <h3>MIN</h3>
         </div>
        <div>
-        <input type="number" class="max" value="2019">
+        <input type="number" class="max" value=2019>
         <h3>MAX</h3>
        </div>
     </div>
     <h3>SCORE</h3>
     <input type="number" id="score" >
     <div id="btn">
-
             <button>1</button>
             <button>2</button>
             <button>3</button>
@@ -31,30 +30,51 @@
             <button>7</button>
             <button>8</button>
             <button>9</button>
-    </div>
-    <div>
-        <button class="lastbtn">0</button>
+            <button>0</button>
     </div>
    
     <div>
-        <button id="enter">ENTER</button>
+        <button id="compair">ENTER</button>
     </div>
 </div>
 
 </body>
 <script>
     let inp1 = document.getElementsByClassName('min')
-    inp1.value = 43;
+   
     let inp2 = document.getElementsByClassName('max')
-    inp1.value = 2019;
-    let score = document.getElementById('score')
-    let buttons = document.querySelectorAll('button')
-    console.log(buttons)
-    let str="";
-    let arr = Array.from(buttons)
-    arr.forEach('click' (e)=> {
-       str+= e.target.innerHTML
-       score.value = str;
-    });
+   
+    let result = document.getElementById('score');
+
+    let key = document.querySelectorAll('#btn > button')
+   
+    for(let i=0; i<key.length; i++){
+        key[i]. addEventListener('click',()=>{
+        result.value += key[i].innerText
+    })
+    }
+
+   let compar = document.getElementById('compair').addEventListener('click',()=>{
+    if(Number(result.value) < Number(inp1.value)){
+        inp1.value = result.value
+   }
+   else if(Number(result.value) > Number(inp1.value)){
+        inp2.value = result.value
+   }
+   else {
+     result.value = result.value
+   }
+})
+    
 </script>
 </html>
+
+
+    <!-- // console.log(buttons)
+    // let str="";
+    // let arr = Array.from(buttons)
+    // console.log(arr)
+    // arr.forEach('click' (e)=> {S
+    //    str+= e.target.innerHTML
+    //    score.value = str;
+    // }); -->

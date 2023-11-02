@@ -46,26 +46,39 @@
 <script>
     
     let display = document.getElementById("display")
-    let keybord = document.querySelectorAll('button');
-    // console.log(keybord)
-    let str = "";
-    let arr = Array.from(keybord);
-    arr.forEach(keybord => {
-        keybord.addEventListener('click'(e)=>{
-            if(e.target.innerHTML=='='){
-                str=eval(str);
-                display.value=str
-            }
-        else if(e.target.innerHTML == 'Clear'){
-            str = ""
-            display.value=str;
-        }
-            else{
-                str+=e.target.innerHTML;
-                display.value=str;
-            }
-        })
-    });
+    let key = document.querySelectorAll('button');
+    let str ="";
+    for(let i=0; i<key.length; i++){
+       
+        key[i]. addEventListener('click',()=>{
+            
+    //    display.value += key[i].innerText
+       str+=eval(key[i].innerText);
+        display.value=str
+    })
+    }
+
+
+    // let str = "";
+    // let arr = Array.from(key);
+    // arr.forEach(key => {
+    //     key.addEventListener('click',(e)=>{
+    //         str+=e.target.innerHTML;
+    //             display.value=str;
+        //     if(e.target.innerHTML=='='){
+        //         str=eval(str);
+        //         display.value=str
+        //     }
+        // else if(e.target.innerHTML == 'Clear'){
+        //     str = ""
+        //     display.value=str;
+        // }
+        //     else{
+        //         str+=e.target.innerHTML;
+        //         display.value=str;
+        //     }
+    //     })
+    // });
        
 </script>
 
